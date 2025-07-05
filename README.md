@@ -25,7 +25,7 @@ Securely connect to [Snowflake](https://www.snowflake.com/) using **JWT-based pr
 ## Add your .env file
 To encode your PEM key:
 ```
-cat rsa_key.p8 | base64
+encoded := base64.StdEncoding.EncodeToString([]byte(privateKeyPEM))
 ```
 Create a .env file in the root directory with the following variables:
 ```
@@ -55,4 +55,4 @@ The gosnowflake driver handles the connection securely.
 Feel free to fork the repo, raise issues, or submit pull requests!
 
 ## Blog Post
-[Connecting to Snowflake Using Private Key Auth in Go](http://example.com)
+[Connecting to Snowflake Using Private Key Authentication in Go (Golang)](https://medium.com/@bharath0292/connecting-to-snowflake-using-private-key-authentication-in-go-golang-0156cc5ac61d)
